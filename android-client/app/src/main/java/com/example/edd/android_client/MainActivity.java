@@ -49,9 +49,6 @@ public class MainActivity extends AppCompatActivity {
            registerUser();
             }
         });
-
-
-
     }
 
     private void registerUser() {
@@ -88,8 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 return params;
             }
         };
-        RequestQueue requestQueue= Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
 
+         RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
     }
 }
