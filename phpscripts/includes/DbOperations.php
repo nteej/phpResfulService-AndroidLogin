@@ -33,5 +33,20 @@
       $stmt->store_result();
       return $stmt->num_rows > 0;
   }
+
+  public function getuserbyemail($username){
+      $stmt=$this->conn->prepare("SELECT * FROM `users` WHERE username =?");
+      $stmt->bind_param("s",$username);
+     return $stmt->get_result()->fetch_assoc();
+  }
+
+  public function userlogin($username,$pass){
+      $password=md5($pass);
+      $stmt=$this->conn->prepare("select id from users where username=? and password=?");
+      $stmt->bind_param("ss",$username,$password);
+      $stmt->execute();
+      $stmt->store_result();
+      return $stmt->num_rows>0;
+  }
     }
  ?>
