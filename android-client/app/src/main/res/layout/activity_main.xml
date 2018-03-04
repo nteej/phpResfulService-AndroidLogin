@@ -13,8 +13,20 @@
         <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="Email"
             android:id="@+id/txtinputemail" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtlayoutusername">
+        <android.support.design.widget.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:id="@+id/txtinputusername" />
     </android.support.design.widget.TextInputLayout>
     <android.support.design.widget.TextInputLayout
         android:minWidth="25px"
@@ -38,7 +50,7 @@
             android:text="Login"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/btclear" />
+            android:id="@+id/btnlogin" />
         <Button
             android:text="SignUp"
             android:layout_width="wrap_content"
@@ -52,5 +64,18 @@
         android:id="@+id/progressBar1"
         android:layout_gravity="center_horizontal"
         android:visibility="gone" />
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already Registered? Click Here to Login"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#000"
+        />
+</LinearLayout>
 </LinearLayout>

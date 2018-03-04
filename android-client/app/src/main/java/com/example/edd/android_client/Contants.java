@@ -5,6 +5,6 @@ package com.example.edd.android_client;
  */
 
 public class Contants {
-    private  static final String Root_url="http://localhost/v1/";
+    private  static final String Root_url="http://192.168.43.171/v1/";
     public static final String registeruserUrl=Root_url+"registeruser.php";
 }
