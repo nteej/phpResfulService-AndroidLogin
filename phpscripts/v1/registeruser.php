@@ -1,14 +1,14 @@
 <?php
 
-require_once '../includes/DbOperations.php';
+require '../includes/DbOperations.php';
 $responce=array();
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
     if(
-        isset($_POST['username']) and
-        isset($_POST['email']) and 
-        isset($_POST['password'])){
-
+        isset($_POST['username']) &&
+        isset($_POST['email']) &&
+        isset($_POST['password']))
+        {
     $db=new DbOperation();
 if($db->createuser(
         $_POST['username'],
@@ -20,7 +20,7 @@ if($db->createuser(
     }else{
         $responce['error']=true;
         $responce['message']="Some error ocurred Please try again";
-    }
+     }
 
 
     }else{
@@ -32,4 +32,5 @@ if($db->createuser(
     $responce['error']=true;
     $responce['message']="Invaid Request";
 }
-echo  json_encode($responces);
+echo  json_encode($responce);
+?>
